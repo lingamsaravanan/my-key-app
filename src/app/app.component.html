@@ -1,0 +1,17 @@
+
+<div class="container">
+    <ul class='nav nav-pills nav-container'>
+        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/home']">Home</a></li>
+        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/summary']">Dashboard</a></li>
+        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/pay-card']">Pay Card</a></li>
+        <li><a class='nav-link' routerLinkActive='active' [routerLink]="['/news']">News</a></li>
+    </ul>
+    <!-- <app-home></app-home> -->
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>
+    <!-- <app-summary></app-summary> -->
+    <!-- <app-activity></app-activity> -->
+    <!-- Your API key is: 3583214815e14e2e887b223158a4fa6a -->
+    <!-- https://gnews.io/api/v3/top-news?token=4c942f322a23b9f8e92a0f555672c37d -->
+</div>

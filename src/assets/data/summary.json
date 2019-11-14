@@ -1,0 +1,10 @@
+[
+    {
+        "current_balance": 5000,
+        "available_credit": 4000,
+        "payment_due": "2019-12-13 23:46:00 UTC",
+        "min_payment": 25,
+        "Statement_balance": 5000,
+        "automatic_payments": "Off"
+    }
+]

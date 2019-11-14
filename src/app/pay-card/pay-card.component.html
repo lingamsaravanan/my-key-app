@@ -1,0 +1,59 @@
+<div class="card">
+        <div class="card-header">
+            {{widgetTitle}}
+        </div>
+    
+        <div class='card-body'>
+          
+                <form [formGroup]="payCardForm" (ngSubmit)="onSubmit()">
+                    <div class="form-row">
+                        <div class="form-group col-sm-10">
+                            <label>Account Name </label>
+                            <select formControlName="accountName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.accountName.errors }">
+                                <option value=""></option>
+                                <option value="credit card 123">credit card 123</option>
+                                <option value="credit card 456">credit card 456</option>
+                            </select>
+                            <div *ngIf="submitted && f.accountName.errors" class="invalid-feedback">
+                                <div *ngIf="f.accountName.errors.required">Account Name is required</div>
+                            </div>
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="custom-control custom-radio col-sm-10">
+                                <!-- <input type="radio" id="totalAmount" name="amount" formControlName="amount" class="custom-control-input">
+                                <label class="custom-control-label" for="totalAmount">400</label> -->
+                                <input id="totalAmount" type="radio" value="Total Amount - $400" name="amount" formControlName="amount" class="custom-control-input">
+                                <label class="custom-control-label" for="totalAmount">Total Amount - $400</label>
+                            </div>
+                            <div class="custom-control custom-radio col-sm-10">
+                                <!-- <input type="radio" id="minAmount" name="amount" formControlName="amount" class="custom-control-input">
+                                <label class="custom-control-label" for="minAmount">$25</label> -->
+                                <input id="female" type="radio" value="Min Amount - $25" name="amount" formControlName="amount" class="custom-control-input">
+                                <label class="custom-control-label" for="minAmount">Min Amount - $25</label>
+                            </div>
+
+                            <div *ngIf="isSubmitted && f.amount.errors" class="invalid-feedback">
+                                    <div *ngIf="f.amount.errors.required">Amount is required</div>
+                                 </div>
+
+                            <!-- <div class="custom-control custom-radio col-sm-10">
+                                <input type="radio" id="otherAmount" name="amount" formControlName="amount" class="custom-control-input">
+                                <label class="custom-control-label" for="otherAmount">Other 
+                                    <input type="text" formControlName="otherAmount" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.otherAmount.errors }" />
+                                    <div *ngIf="submitted && f.otherAmount.errors && f.amount.errors" class="invalid-feedback">
+                                        <div *ngIf="f.otherAmount.errors.required">Amount is required</div>
+                                    </div> </label>
+                            </div> -->
+                            
+                        </div>
+
+                    </div>
+                    
+                    <div class="text-center">
+                        <button class="btn btn-primary mr-1">Register</button>
+                        <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+                    </div>
+                </form>
+
+        </div>
+    </div>

@@ -1,0 +1,40 @@
+<div class="card summary-container">
+    <div class="card-header">
+        {{widgetTitle}}
+    </div>
+    
+    <div class='card-body'>
+        <div class='row'>
+            <div class='col-md-6'>
+                <h4>CREDIT CARD (...1319) </h4>
+            </div>
+        </div>
+        <div class="row chicklet-container">
+                <div class="col-4">
+                    <div>{{ summaryData.current_balance | currency: 'USD' }}</div>
+                    <div>Current balance</div>
+                </div> 
+                <div class="col-4">
+                    <div>{{ summaryData.available_credit | currency: 'USD' }}</div>
+                    <div>Available credit</div>
+                </div>
+                <div class="col-4">
+                    <div>{{ summaryData.payment_due | date }}</div>
+                    <div>Next payment due</div>
+                </div>
+                <div class="col-4">
+                    <div>{{ summaryData.min_payment | currency: 'USD' }}</div>
+                    <div>Minimum payment due</div>
+                </div>
+                <div class="col-4">
+                    <div>{{ summaryData.Statement_balance | currency: 'USD' }}</div>
+                    <div>Statement balance</div>
+                </div>
+                <div class="col-4">
+                    <div>{{ summaryData.automatic_payments }}</div>
+                    <div>Automatic payments</div>
+                </div>
+            </div>
+    </div>
+</div>
+<app-activity></app-activity>
