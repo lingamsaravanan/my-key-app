@@ -15,7 +15,7 @@ export class NewsComponent implements OnInit {
   constructor(private dataService: DataService) { }
 
   ngOnInit() {
-    this.dataService.sendGetRequest().subscribe((data) => {
+    this.dataService.sendGetRequest().subscribe((data: any) => {
       console.log(data);
       console.log(data.articles);
       this.news = data.articles;
